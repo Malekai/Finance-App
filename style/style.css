@@ -1,0 +1,48 @@
+.input-group {
+  margin-top: 25px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.stocks:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.delete {
+  color: red;
+  text-align: center;
+}
+
+.delete:hover {
+  background-color: red;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+}
+
+footer a{
+  color: gray;
+}
