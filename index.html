@@ -15,4 +15,9 @@
   crossorigin="anonymous"></script>
   <script src="https://use.fontawesome.com/d30770d73e.js"></script>
   <script src="/bundle.js"></script>
+  <script>jQuery.ajaxPrefilter(function(options) {
+if (options.crossDomain && jQuery.support.cors) {
+options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+}
+});</script>
 </html>
