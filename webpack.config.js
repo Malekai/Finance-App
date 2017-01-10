@@ -25,20 +25,5 @@ module.exports = {
     watchOptions: {
     poll: true
     }
-    contentBase: DIST_FOLDER,
-port: 8080,
-// Send API requests on localhost to API server get around CORS.
-proxy: {
-   '/api': {
-      target: {
-         host: "0.0.0.0",
-         protocol: 'http:',
-         port: 8080
-      },
-      pathRewrite: {
-         '^/api': ''
-      }
-   }
-}
   }
 };
