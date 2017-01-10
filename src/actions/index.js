@@ -9,7 +9,7 @@ export const DELETE_TICKER = 'DELETE_TICKER';
 export const FETCH_CHART = 'FETCH_CHART';
 
 export function fetchTicker(ticker) {
-  const url = `${ROOT_URL}?symbol=${ticker}&callback=myFunction`;
+  const url = `${ROOT_URL}?symbol=${ticker}&callback=?`;
   const request = axios.get(url);
 
   return (dispatch) => {
@@ -22,7 +22,7 @@ export function fetchTicker(ticker) {
 }
 
 export function fetchChart(ticker) {
-  const selectedUrl = `${SELECT_URL}${ticker.Symbol}&callback=myFunction`
+  const selectedUrl = `${SELECT_URL}${ticker.Symbol}&callback=?`
   const new_request = axios.get(selectedUrl);
 
   return (dispatch) => {
