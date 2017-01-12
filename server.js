@@ -1,7 +1,9 @@
-const express = require('express');
-const path = require('path');
-const port = process.env.PORT || 8080;
-const app = express();
+const express = require('express'),
+      cors = require('cors'),
+      path = require('path'),
+      port = process.env.PORT || 8080,
+      app = express();
+
 
 app.use(express.static(__dirname));
 
