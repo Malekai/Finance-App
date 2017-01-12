@@ -1,3 +1,5 @@
+var markit = require('node-markitondemand');
+
 const ROOT_URL = 'http://dev.markitondemand.com/MODApis/Api/v2/Quote/jsonp';
 const SELECT_URL = 'http://dev.markitondemand.com/MODApis/Api/Timeseries/jsonp?symbol=';
 

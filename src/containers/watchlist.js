@@ -16,7 +16,6 @@ class WatchList extends Component {
   renderList() {
     return this.props.stocks.map((stock) => {
       return (
-        <tbody>
         <tr className="stocks" key={stock.Symbol}>
           <td onClick={() => this.props.fetchChart(stock)}>{stock.Symbol}</td>
           <td onClick={() => this.props.fetchChart(stock)}>{stock.Name}</td>
@@ -29,7 +28,6 @@ class WatchList extends Component {
           <td onClick={() => this.props.fetchChart(stock)}>{stock.Open}</td>
           <td className="delete" onClick={() => this.props.deleteTicker(stock)}><FontAwesome name='times-circle' /></td>
         </tr>
-      </tbody>
       );
     });
   }
@@ -37,6 +35,7 @@ class WatchList extends Component {
   render() {
     return (
       <table>
+        <thead>
         <tr>
           <th>Symbol</th>
           <th>Company</th>
@@ -48,7 +47,10 @@ class WatchList extends Component {
           <th>Low</th>
           <th>Open</th>
         </tr>
+      </thead>
+      <tbody>
         {this.renderList()}
+      </tbody>
       </table>
     );
   }
