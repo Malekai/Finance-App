@@ -1,5 +1,5 @@
-const ROOT_URL = 'https://dev.markitondemand.com/MODApis/Api/v2/Quote/jsonp';
-const SELECT_URL = 'https://dev.markitondemand.com/MODApis/Api/Timeseries/jsonp?symbol=';
+const ROOT_URL = 'http://dev.markitondemand.com/MODApis/Api/v2/Quote/jsonp';
+const SELECT_URL = 'http://dev.markitondemand.com/MODApis/Api/Timeseries/jsonp?symbol=';
 
 export const FETCH_TICKER = 'FETCH_TICKER';
 export const TICKER_SELECTED = 'TICKER_SELECTED';
