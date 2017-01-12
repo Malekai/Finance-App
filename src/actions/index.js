@@ -8,8 +8,7 @@ export const FETCH_CHART = 'FETCH_CHART';
 
 export function fetchTicker(ticker) {
   const url = `${ROOT_URL}?symbol=${ticker}`;
-  const request = axios.get(url);
-
+  
   return (dispatch) => {
     $.ajax({
         url: url,
@@ -25,7 +24,6 @@ export function fetchTicker(ticker) {
 
 export function fetchChart(ticker) {
   const selectedUrl = `${SELECT_URL}${ticker.Symbol}`
-  const new_request = axios.get(selectedUrl);
 
   return (dispatch) => {
     $.ajax({

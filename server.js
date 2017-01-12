@@ -1,5 +1,4 @@
 const express = require('express'),
-      cors = require('cors'),
       path = require('path'),
       port = process.env.PORT || 8080,
       app = express();
