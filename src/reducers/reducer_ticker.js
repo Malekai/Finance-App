@@ -22,7 +22,12 @@ const INITIAL_STATE = [{
 export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
     case FETCH_TICKER:
-      return [ action.payload, ...state ];
+      if (state.find(ticker => ticker.Symbol === action.payload.Symbol)) {
+        state = state.filter(ticker => ticker.Symbol !== action.payload.Symbol);
+        return [ action.payload, ...state ];
+      } else {
+        return [ action.payload, ...state ];
+      }
     case DELETE_TICKER:
       return state.filter(ticker => ticker.Symbol !== action.payload.Symbol);
   }
