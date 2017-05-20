@@ -1,5 +1,3 @@
-var markit = require('node-markitondemand');
-
 const ROOT_URL = 'http://dev.markitondemand.com/MODApis/Api/v2/Quote/jsonp';
 const SELECT_URL = 'http://dev.markitondemand.com/MODApis/Api/Timeseries/jsonp?symbol=';
 
@@ -25,7 +23,7 @@ export function fetchTicker(ticker) {
 }
 
 export function fetchChart(ticker) {
-  const selectedUrl = `${SELECT_URL}${ticker.Symbol}`
+  const selectedUrl = `${SELECT_URL}${ticker}`
 
   return (dispatch) => {
     $.ajax({

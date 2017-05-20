@@ -2,7 +2,7 @@ import { FETCH_CHART } from '../actions/index';
 
 const INITIAL_STATE = {
 "Data": {
-"Name": "Apple Inc",
+"Name": "Apple Inc (Up to 1.4.17)",
 "Symbol": "AAPL",
 "Series": {
 "open": {

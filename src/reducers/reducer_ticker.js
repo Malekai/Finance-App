@@ -3,7 +3,7 @@ import { DELETE_TICKER } from '../actions/index';
 
 const INITIAL_STATE = [{
 "Status": "SUCCESS",
-"Name": "Apple Inc",
+"Name": "Apple Inc (1.4.17)",
 "Symbol": "AAPL",
 "LastPrice": 118.99,
 "Change": 1.08,
