@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from '../containers/search_bar';
 import WatchList from '../containers/watchlist';
-import StockChart from '../containers/chart';
 
 export default class App extends Component {
   render() {
@@ -10,8 +9,6 @@ export default class App extends Component {
         <SearchBar />
         <br />
         <WatchList />
-        <br />
-        <StockChart />
       </div>
     );
   }
