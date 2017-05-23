@@ -2,8 +2,8 @@ import { FETCH_CHART } from '../actions/index';
 
 const INITIAL_STATE = {
 "Data": {
-"Name": "Click a ticker to update chart",
-"Symbol": "AAPL",
+"Name": "Sample Chart",
+"Symbol": "Click a ticker to update chart",
 "Series": {
 "open": {
 "min": 90,
