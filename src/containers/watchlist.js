@@ -17,15 +17,15 @@ class WatchList extends Component {
     return this.props.stocks.map((stock) => {
       return (
         <tr className="stocks" key={stock.Symbol}>
-          <td>{stock.Symbol}</td>
-          <td>{stock.Name}</td>
-          <td>{stock.LastPrice}</td>
-          <td className={this.computeClass((stock.ChangePercent).toFixed(2))}>{(stock.ChangePercent).toFixed(2)}%</td>
-          <td>{stock.MarketCap}</td>
-          <td>{stock.Volume}</td>
-          <td>{stock.High}</td>
-          <td>{stock.Low}</td>
-          <td>{stock.Open}</td>
+          <td onClick={() => this.props.fetchChart(stock.Symbol)}>{stock.Symbol}</td>
+          <td onClick={() => this.props.fetchChart(stock.Symbol)}>{stock.Name}</td>
+          <td onClick={() => this.props.fetchChart(stock.Symbol)}>{stock.LastPrice}</td>
+          <td onClick={() => this.props.fetchChart(stock.Symbol)} className={this.computeClass((stock.ChangePercent).toFixed(2))}>{(stock.ChangePercent).toFixed(2)}%</td>
+          <td onClick={() => this.props.fetchChart(stock.Symbol)}>{stock.MarketCap}</td>
+          <td onClick={() => this.props.fetchChart(stock.Symbol)}>{stock.Volume}</td>
+          <td onClick={() => this.props.fetchChart(stock.Symbol)}>{stock.High}</td>
+          <td onClick={() => this.props.fetchChart(stock.Symbol)}>{stock.Low}</td>
+          <td onClick={() => this.props.fetchChart(stock.Symbol)}>{stock.Open}</td>
           <td className="delete" onClick={() => this.props.deleteTicker(stock)}><FontAwesome name='times-circle' /></td>
         </tr>
       );
@@ -34,7 +34,6 @@ class WatchList extends Component {
 
   render() {
     return (
-      <div>
       <table>
         <thead>
         <tr>
@@ -53,7 +52,6 @@ class WatchList extends Component {
         {this.renderList()}
       </tbody>
       </table>
-      </div>
     );
   }
 }
@@ -63,7 +61,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ deleteTicker }, dispatch)
+  return bindActionCreators({ fetchChart, deleteTicker }, dispatch)
 }
 
 
