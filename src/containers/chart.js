@@ -54,10 +54,8 @@ class StockChart extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    chart: state.chart
-  };
+const mapStateToProps = state => {
+  return { chart: state.chart };
 }
 
 

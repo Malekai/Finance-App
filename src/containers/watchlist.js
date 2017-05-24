@@ -56,7 +56,7 @@ class WatchList extends Component {
   }
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = state => {
   return { stocks: state.tickers };
 }
 
