@@ -5,7 +5,7 @@ export default function(state = [], action) {
   switch (action.type) {
     case FETCH_TICKER:
       if (state.find(ticker => ticker.Symbol === action.payload.Symbol)) {
-        state = state.filter(ticker => ticker.Symbol !== action.payload.Symbol);
+        state.filter(ticker => ticker.Symbol !== action.payload.Symbol);
         return [ action.payload, ...state ];
       } else {
         return [ action.payload, ...state ];
