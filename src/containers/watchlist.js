@@ -6,8 +6,10 @@ import classNames from 'classnames';
 import FontAwesome from 'react-fontawesome';
 
 class WatchList extends Component {
+  // Check if the value is negative or positive and make it red or green
   computeClass(val) {
     return classNames({
+      // Dynamically assign classes based on value
       green: val > 0,
       red: val < 0,
     });
@@ -56,6 +58,7 @@ class WatchList extends Component {
   }
 }
 
+//lightly go over this
 const mapStateToProps = state => {
   return { stocks: state.tickers };
 }

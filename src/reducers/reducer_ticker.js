@@ -6,6 +6,7 @@ export default function(state = [], action) {
     case FETCH_TICKER:
       if (state.find(ticker => ticker.Symbol === action.payload.Symbol)) {
         state.filter(ticker => ticker.Symbol !== action.payload.Symbol);
+        // Concat
         return [ action.payload, ...state ];
       } else {
         return [ action.payload, ...state ];

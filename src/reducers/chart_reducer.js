@@ -10,64 +10,44 @@ const INITIAL_STATE = {
 "max": 0,
 "maxDate": 0,
 "minDate": 0,
-"values": [
-0
-]
+"values": [0]
 },
 "high": {
 "min": 0,
 "max": 0,
 "maxDate": 0,
 "minDate": 0,
-"values": [
-0
-]
+"values": [0]
 },
 "low": {
 "min": 0,
 "max": 0,
 "maxDate": 0,
 "minDate": 0,
-"values": [
-0
-]
+"values": [0]
 },
 "close": {
 "min": 0,
 "max": 0,
 "maxDate": 0,
 "minDate": 0,
-"values": [
-0
-]
+"values": [0]
 }
 },
 "SeriesLabels": {
 "x": {
-"text": [
-
-],
-"dates": [
-0
-],
-"utcDates": [
-0
-],
-"pos": [
-0
-],
-"priorities": [
-0
-]
+"text": [],
+"dates": [0],
+"utcDates": [0],
+"pos": [0],
+"priorities": [0]
 }
 },
-"SeriesLabelCoordinates": [
-0
-],
+"SeriesLabelCoordinates": [0],
 "SeriesDuration": 0,
 "SeriesDates": []
 },
-"Matches": true
+"Matches": false
 }
 
 export default function(state = INITIAL_STATE, action) {
